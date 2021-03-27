@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script src="./main.js"></script>
+</head>
+<body onload="newPrice()">
+
+  <div class="headings-top">
+    <img id="circles" src="./images/pattern-circles.svg" alt="circles">
+    <h1>Simple, traffic-based pricing</h1>
+    <p class="sub-heading">Sign-up for our 30-day trial. No credit card required. </p>
+  </div>
+  
+  
+  <div id="card">
+    <div class="top-container">
+      <span><span id="views"></span> PAGEVIEWS</span>
+      <span><strong id="ppm"></strong>/month</span>
+    </div>
+      <input onchange="newPrice()" class="slider" type="range" name="price" id="price-input" min="1" max="200" step="1" >
+
+    <div class="billing">
+      <span>Monthly Billing</span>
+      <label class="switch">
+        <input onchange="newPrice()" id="checked" type="checkbox">
+        <span class="toggle"></span>
+      </label>
+      <span>Yearly Billing</span>
+      <span id="discount">25% discount</span>
+    </div>
+
+    <div class="hort-line"></div>
+    <div class="bottom-section">
+      <div class="flexin">
+        <div class="flex">
+          <img src="./images/icon-check.svg" alt="check mark">
+          <span>Unlimited websites</span>
+        </div>
+        <div class="flex">
+          <img src="./images/icon-check.svg" alt="check mark">
+          <span>100% data ownership</span>
+        </div>
+        <div class="flex">
+          <img src="./images/icon-check.svg" alt="check mark">
+          <span>Email reports</span>
+        </div>
+      </div>
+      <div id="start-trial">Start my trial</div>
+    </div>
+  </div>  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>

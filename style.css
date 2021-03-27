@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --card-padding: 50px;
+}
+
+body, html {
+    margin: 0;
+    padding : 0;
+    font-family: 'Manrope', sans-serif;
+    background-color: hsl(230, 100%, 99%);
+    color: hsl(227, 35%, 25%);
+}
+
+body {
+    background-image: url(./images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-size: 100% 400px;
+    padding: 25px 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+/**/
+
+#circles {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    z-index: 1;
+    margin: 5px 0;
+    position: relative;
+    font-weight: 1px;
+}
+
+.sub-heading {
+    color: hsl(225, 20%, 60%);
+    z-index: 1;
+    text-align: center;
+    margin: 0;
+    font-weight: 700;
+}
+
+/*Card for the prices*/
+#card {
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    max-width: 600px;
+    padding: 25px 0;
+    font-size: 1.2em;
+    box-shadow: 0px 10px 10px #f1f5fe;
+}
+
+.hort-line {
+    height: 1px;
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    margin: 40px 0;
+}
+
+.top-container {
+    padding: 0 var(--card-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-container:nth-child(1){
+    font-size: .6em;
+    font-weight: 700;
+    color: hsl(225, 20%, 60%);
+    letter-spacing: 2px;
+}
+
+
+#ppm {
+    font-size: 3em;
+    font-weight: 700;
+    color: hsl(227, 35%, 25%);
+}
+
+
+
+/*price input*/  
+.slider {
+    display: block;
+    -webkit-appearance: none;
+    background-color: #dddddd;
+    width: 90%;
+    border-radius: 10px;
+    margin: 25px auto;
+}
+
+.slider:focus {
+    border: none;
+    outline: none;
+}
+
+.slider::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: hsl(174, 77%, 80%);
+    margin-top: -1px;
+}
+
+.slider::-webkit-slider-thumb {
+    width: 30px;
+    -webkit-appearance: none;
+    height: 30px;
+    cursor: ew-resize;
+    background: url(./images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(174, 86%, 45%);
+    background-position: center;
+    border-radius: 100%;
+    position: relative;
+    top: -8px;
+}
+
+
+/*Billing*/
+.billing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.billing > span {
+    font-size: .7em;
+}
+
+#discount {
+    position: absolute;
+    font-size: .6em;
+    right: 17%;
+    background-color: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    padding: 1px 3px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 27px;
+    width: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle {
+    background-color: #ddd;
+    border-radius: 20px;
+    height: 27px;
+    width: 40px;
+    transition: .3s;
+}
+
+.switch input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: hsl(230, 100%, 99%);
+    margin: 0;
+    border-radius: 100%;
+    transition: 0.3s;
+    transform: translateX(-7px);
+    z-index: 1;
+}
+
+.switch input:checked {
+    transform: translateX(7px);
+}
+
+input:checked + .toggle {
+    background-color:hsl(174, 86%, 45%)
+}
+
+
+.switch input:focus {
+    outline: none;
+    border: none;
+}
+
+.toggle {
+    position: absolute;
+}
+
+/*bottom section*/
+.bottom-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexin span {
+    font-weight: 700;
+    font-size: .8em;
+    color: hsl(225, 20%, 60%);
+}
+
+.flexin img {
+    margin-right: 5px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+#start-trial {
+    background-color: hsl(227, 35%, 25%);
+    color: white;
+    padding: 10px 30px;
+    color: hsl(225, 20%, 60%);
+    border-radius: 25px;
+    font-weight: 800;
+    font-size: .8em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#start-trial:hover {
+    color: hsl(224, 33%, 73%);
+}
+
+/*Mobile Send*/
+@media screen and (max-width: 750px){
+    #discount{
+        content: '25%';
+    }
+
+    .bottom-section {
+        flex-direction: column;
+    }
+
+    .flexin {
+        margin-bottom: 25px !important;
+    }
+}
